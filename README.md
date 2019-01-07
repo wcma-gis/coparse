@@ -2,8 +2,6 @@
 
 Coordinate parser for use in Node JS which parses coordinates in DD. DM, DMS and UTM coordinates, returning a standardised DD json object. By default the parser accepts coordinates in Long/Lat or UTM format.
 
-See use.html for more information
-
 Intended to initially be used in Google Cloud Functions.
 
 ## Use

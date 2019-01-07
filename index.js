@@ -67,6 +67,8 @@ exports.main = (req, res) => {
       pt.error = true
       pt.error_msg = "Cannot determine coordinate type";
     }
+
+
     //Update method
     if (debug) result.debug.method = method;
     //Check for match
@@ -103,7 +105,7 @@ exports.main = (req, res) => {
 };
 
 /**
- * Convers a result object to a ckanapi like object
+ * Converts a result object to a ckanapi like object
  *
  * @param result result object
  * @returns result object as ckan-like object
@@ -129,7 +131,7 @@ function toCkanAPI(result, debug) {
 }
 
 /**
- * Convers a result object to geojson
+ * Converts a result object to geojson
  *
  * @param result result object
  * @returns result object as geojson
@@ -163,7 +165,7 @@ function toGeojson(result, debug) {
 }
 
 /**
- * Convers a DD coordinate into a DD object
+ * Converts a DD coordinate into a DD object
  *
  * @param {*} parts 2 part list consisting of lat decimal degrees, lng decimal degrees with the format [string,prefix,value,postfix]
  * @returns DD object
@@ -271,7 +273,7 @@ function fromDM(parts) {
 }
 
 /**
- * Convers a DMS coordinate into a DD object
+ * Converts a DMS coordinate into a DD object
  *
  * @param {*} parts  6 part array consisting of lat degrees, lat minutes, lat seconds, lng degrees, lng minutes, lng seconds with the format [string,prefix,value,postfix]
  * @returns DD object
@@ -359,7 +361,7 @@ function fromDMS(parts) {
   };
 }
 /**
- * Convers a UTM coordinate into a DD object
+ * Converts a UTM coordinate into a DD object
  *
  * @param {*} parts 3 part array consisting of zone, easting and nothing. Zone is negative if in southern hemisphere with the format [string,prefix,value,postfix]
  * @returns  DD object
